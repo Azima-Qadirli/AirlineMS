@@ -1,0 +1,73 @@
+﻿@model Ticket
+
+<h1>Airline Management System</h1>
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="FinCode" class="form-label">FinCode</label>
+        <input type="text" class="form-control" asp-for="FinCode">
+        <span asp-validation-for="FinCode" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Phone" class="form-label">Phone</label>
+        <input type="number" class="form-control" asp-for="Phone">
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Name</label>
+        <input type="text" class="form-control" asp-for="Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Surname" class="form-label">Surname</label>
+        <input type="text" class="form-control" asp-for="Surname">
+        <span asp-validation-for="Surname" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="DepartureDate" class="form-label">DepartureDate</label>
+        <input type="date" class="form-control" asp-for="DepartureDate">
+        <span asp-validation-for="DepartureDate" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ReturnDate" class="form-label">ReturnDate</label>
+        <input type="date" class="form-control" asp-for="ReturnDate">
+        <span asp-validation-for="ReturnDate" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="DepartingCity" class="form-label">DepartingCity</label>
+        <select class="form-select" asp-for="DepartingCity" aria-label="Default select example">
+            <option selected disabled>Select one of them</option>
+            <option value="Baku">Baku</option>
+            <option value="Moscow">Moscow</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Paris">Paris</option>
+            <option value="London">London</option>
+            <span class="text-danger small" asp-validation-for="DepartingCity"></span>
+        </select>
+        <span asp-validation-for="DepartingCity" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="DestinationCity" class="form-label">DestinationCity</label>
+        <select class="form-select" asp-for="DestinationCity" aria-label="Default select example">
+            <option selected disabled>Select one of them</option>
+            <option value="Baku">Baku</option>
+            <option value="Moscow">Moscow</option>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Paris">Paris</option>
+            <option value="London">London</option>
+            <span class="text-danger small" asp-validation-for="DestinationCity"></span>
+        </select>
+        <span asp-validation-for="DestinationCity" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Airline" class="form-label">Airline</label>
+        <input type="text" class="form-control" asp-for="Airline">
+        <span asp-validation-for="Airline" class="text-danger"></span>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
